@@ -23,11 +23,11 @@
         </nav>
     </header>
 
- <section id="slogan" class="slogan">
+    <section id="slogan" class="slogan">
         <h1>Empowering Your Business with IT Excellence</h1>
     </section>
 
-     <section id="about-us" class="about-us" style="background-image: url('assets/images/Hero.png');">
+    <section id="about-us" class="about-us" style="background-image: url('assets/images/Hero.png');">
         <div class="about-us-content">
             <h1>About Us</h1>
             <p>Welcome to Phylia Consulting, where we empower businesses through expert IT solutions. With a focus on innovation and excellence, we deliver tailored services that meet the unique needs of each client. From advanced network setups to comprehensive IT support, our goal is to enhance your operational efficiency and drive success.</p>
@@ -63,6 +63,11 @@
                 <img src="assets/images/IT_Infrastructure_Managemen.png" alt="IT Infrastructure Management">
                 <h3>IT Infrastructure Management</h3>
                 <p>System monitoring, maintenance, and security updates.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/Cybersecurity.png" alt="Cybersecurity">
+                <h3>Cybersecurity</h3>
+                <p>Vulnerability assessments, incident response, and security updates.</p>
             </div>
             <div class="service-item">
                 <img src="assets/images/AI_Integration.png" alt="AI Integration">
@@ -133,23 +138,21 @@
         </div>
     </section>
 
-     <section class="contact-section">
+    <section class="contact-section" id="contact">
         <h1>Contact Us</h1>
         <form action="https://getform.io/f/jawxlgyb" method="POST" class="contact-form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" autocomplete="name" required>
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
             
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" autocomplete="off" required></textarea>
             
             <button type="submit">Send</button>
         </form>
     </section>
-
-
 
     <footer>
         <p>&copy; 2024 Phylia Consulting. All rights reserved.</p>
