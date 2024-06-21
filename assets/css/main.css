@@ -400,3 +400,34 @@ nav a:hover {
     font-size: 14px; /* Smaller font size */
     color: #ccc; /* Light grey color for copyright text */
 }
+/* Mobile styling */
+@media only screen and (max-width: 600px) {
+    .logo-container {
+        justify-content: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav a {
+        margin-bottom: 10px;
+    }
+    .services-container,
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-item,
+    .pricing-card {
+        width: 100%;
+    }
+    .additional-notes {
+        padding: 10px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form button {
+        width: 50%;
+    }
+}
