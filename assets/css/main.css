@@ -410,7 +410,10 @@ nav a:hover {
         align-items: center;
     }
     .nav a {
-        margin-bottom: 10px;
+        width: 100%; /* Full width for each menu item */
+        margin-bottom: 10px; /* Add space between menu items */
+        text-align: center; /* Center text */
+
     }
     .services-container,
     .pricing-container {
