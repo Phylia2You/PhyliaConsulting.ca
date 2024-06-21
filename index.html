@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Phylia Consulting</title>
     <link rel="stylesheet" href="assets/css/main.css">
+
 </head>
+
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="assets/images/Final_Source_Files-removebg.png" alt="Phylia Consulting Logo">
+        <div class="logo-container">
+            <img src="assets/images/Final_Source_Files.png" alt="Phylia Consulting Logo" class="logo">
         </div>
-        <nav class="main-nav">
-            <ul>
+        <nav>
+            <ul class="main-menu">
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Our Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
@@ -24,122 +25,188 @@
     </header>
 
     <!-- Slogan Section -->
-    <section class="slogan">
-        <h1>Your IT Solutions Partner</h1>
+    <section id="slogan" class="slogan-section">
+	<div class="slogan">
+  	<h2>Empowering Your Business with IT Excellence</h2>
+	</div>
+
     </section>
 
     <!-- About Us Section -->
-    <section id="about-us" class="about-us">
-        <div class="container">
+    <section id="about-us" section class="about-us-section" style="background: url('assets/images/Hero.png') no-repeat center center; background-size: cover; padding: 20px 20px; text-align: center; color: #000;">
+        <div class="about-content">
             <h1>About Us</h1>
-            <div class="about-content">
-                <p>At Phylia Consulting, we specialize in providing advanced IT solutions that empower your business to achieve excellence. Our commitment is to offer personalized and innovative services that align with your unique business needs. From network setup to IT support, we ensure your infrastructure is optimized for performance and reliability.</p>
-                <p>Our expertise covers a wide range of IT services designed to support businesses of all sizes. We believe in building long-lasting relationships with our clients by delivering high-quality solutions that drive success. Whether it's managing your IT infrastructure or providing strategic consulting, we are dedicated to helping you navigate the complexities of modern technology.</p>
-                <p>With a focus on continuous improvement and client satisfaction, Phylia Consulting is your trusted partner for all your IT needs. We are passionate about technology and its potential to transform businesses. Let us help you unlock the full potential of your IT systems to achieve your business goals.</p>
-            </div>
+            <p>Welcome to Phylia Consulting, where we empower businesses through expert IT solutions. With a focus on innovation and excellence, we deliver tailored services that meet the unique needs of each client. From advanced network setups to comprehensive IT support, our goal is to enhance your operational efficiency and drive success.</p>
+            <p>At Phylia Consulting, we pride ourselves on our ability to adapt and grow with our clients. We understand that technology is constantly evolving, and we strive to provide solutions that are not only effective today but also scalable for tomorrow. Our commitment to excellence ensures that you receive the highest quality service and support, enabling you to focus on what you do best – running your business.</p>
+            <p>We believe in a collaborative approach, working closely with you to understand your business challenges and goals. Our solutions are designed to integrate seamlessly with your existing systems, providing you with a robust and reliable IT infrastructure. Trust Phylia Consulting to be your partner in navigating the complexities of technology and achieving your business objectives.</p>
         </div>
     </section>
 
-    <!-- Our Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
-            <h1>Our Services</h1>
-            <div class="service-grid">
-                <div class="service-item">
-                    <img src="assets/images/Network_Setup.png" alt="Network Setup">
-                    <h2>Network Setup</h2>
-                    <p>Comprehensive network setup solutions for seamless connectivity.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/Wi-Fi_Solutions.png" alt="Wi-Fi Solutions">
-                    <h2>Wi-Fi Solutions</h2>
-                    <p>Advanced Wi-Fi solutions for reliable and high-speed internet access.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/IT_Support.png" alt="IT Support">
-                    <h2>IT Support</h2>
-                    <p>Expert IT support to ensure your systems run smoothly and efficiently.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/Voice_Services.png" alt="Voice Services">
-                    <h2>Voice Services</h2>
-                    <p>High-quality voice services for clear and uninterrupted communication.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/IT_Infrastructure_Managemen.png" alt="IT Infrastructure Management">
-                    <h2>IT Infrastructure Management</h2>
-                    <p>End-to-end management of your IT infrastructure for optimal performance.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/Cybersecurity.png" alt="Cybersecurity">
-                    <h2>Cybersecurity</h2>
-                    <p>Robust cybersecurity measures to protect your business from threats.</p>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/AI_Integration.png" alt="AI Integration">
-                    <h2>AI Integration</h2>
-                    <p>Integrate AI technologies to enhance your business processes.</p>
-                </div>
+        <h1>Our Services</h1>
+        <div class="services-container">
+            <div class="service-item">
+                <img src="assets/images/Network_Setup.png" alt="Network Setup">
+                <h3>Network Setup</h3>
+                <p>Network design, hardware configuration, and maintenance.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/Wi-Fi_Solutions.png" alt="Wi-Fi Solutions">
+                <h3>Wi-Fi Solutions</h3>
+                <p>Setup, optimization, and troubleshooting.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/IT_Support.png" alt="IT Support">
+                <h3>IT Support</h3>
+                <p>Troubleshooting, hardware/software support, and remote assistance.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/Voice_Services.png" alt="Voice Services">
+                <h3>Voice Services</h3>
+                <p>VoIP setup and PBX integration.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/IT_Infrastructure_Managemen.png" alt="IT Infrastructure Management">
+                <h3>IT Infrastructure Management</h3>
+                <p>System monitoring, maintenance, and security updates.</p>
+            </div>
+            <div class="service-item">
+                <img src="assets/images/AI_Integration.png" alt="AI Integration">
+                <h3>AI Integration</h3>
+                <p>AI solutions, automation, and data analysis.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <h1>Pricing</h1>
-            <table class="pricing-table">
-                <tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Network Setup</td>
-                    <td>$180</td>
-                </tr>
-                <tr>
-                    <td>Wi-Fi Solutions</td>
-                    <td>$140</td>
-                </tr>
-                <tr>
-                    <td>IT Support</td>
-                    <td>$110</td>
-                </tr>
-                <tr>
-                    <td>Voice Services</td>
-                    <td>$130</td>
-                </tr>
-                <tr>
-                    <td>IT Infrastructure Management</td>
-                    <td>$230</td>
-                </tr>
-                <tr>
-                    <td>Cybersecurity</td>
-                    <td>$260</td>
-                </tr>
-                <tr>
-                    <td>AI Integration</td>
-                    <td>$210</td>
-                </tr>
-            </table>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing-section" style="background: url('assets/images/Hero.png') no-repeat center center; background-size: cover; padding: 20px 20px; text-align: center; color: #000;">
+
+  <h1>Our Pricing</h1>
+  <div class="pricing-container">
+    <div class="pricing-card">
+      <h3>General IT Consulting</h3>
+      <p class="price">Hourly Rate: $110 - $125 CAD</p>
+      <ul>
+        <li>Expert advice on technology assessments</li>
+        <li>Vendor management</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>Wi-Fi Solutions</h3>
+      <p class="price">Hourly Rate: $85 - $110 CAD</p>
+      <p class="price">Project-Based: $850 - $3200 CAD</p>
+      <ul>
+        <li>Setup, optimization, and troubleshooting</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>Network Setup</h3>
+      <p class="price">Hourly Rate: $85 - $120 CAD</p>
+      <p class="price">Project-Based: $1700 - $5700 CAD</p>
+      <ul>
+        <li>Network design</li>
+        <li>Hardware configuration and maintenance</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>IT Support</h3>
+      <p class="price">Hourly Rate: $85 - $110 CAD</p>
+      <p class="price">Monthly Retainer: $425 - $1250 CAD</p>
+      <ul>
+        <li>Troubleshooting</li>
+        <li>Hardware/software support</li>
+        <li>Remote assistance</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>Managed IT Services</h3>
+      <p class="price">Per User/Device: $65 - $100 CAD per month</p>
+      <p class="price">Full Management: $850 - $2800 CAD per month</p>
+      <ul>
+        <li>System monitoring</li>
+        <li>Maintenance and security updates</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>Voice Services</h3>
+      <p class="price">Hourly Rate: $95 - $125 CAD</p>
+      <p class="price">Project-Based: $1250 - $4050 CAD</p>
+      <ul>
+        <li>VoIP setup</li>
+        <li>PBX integration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+        <div class="additional-notes">
+            <p><strong>Additional Notes:</strong></p>
+            <ul>
+                <li>Travel Charges: Additional fees may apply for on-site visits outside Hamilton, ON.</li>
+                <li>Emergency Support: Rates for emergency or after-hours support are 1.5x standard hourly rates.</li>
+                <li>Custom Solutions: Contact us for tailored IT solutions to fit specific business needs.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="https://getform.io/f/jawxlgyb" method="POST" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
+ <!-- Contact Us section -->
+<section id="contact" class="contact-section">
+    <h1>Contact Us</h1>
+    <form class="contact-form" action="https://formspree.io/f/xvgpppvo" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required autocomplete="on"></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+<!-- Footer Section -->
+<footer class="footer">
+    <p>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+         <a href="#about-us">About Us</a> |
+         <a href="#services">Our Services</a> |
+         <a href="#pricing">Pricing</a> |
+         <a href="#contact">Contact Us</a> 
+
+    </p>
+       <p class="copyright">
+        &copy; 2024 Phylia Consulting. All rights reserved.
+    </p>
+</footer>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">Top</button>
+<script>
+    // Get the button
+    let backToTopButton = document.getElementById("backToTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    backToTopButton.onclick = function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+</script>
+
 </body>
+
 </html>
