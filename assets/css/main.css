@@ -1,5 +1,4 @@
 /* General styling */
-
 html {
   scroll-behavior: smooth;
 }
@@ -51,7 +50,7 @@ nav a {
     display: flex;
     gap: 5px;
     margin: 0;
-    padding: 0; padding: 10px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     color: #000; /* Text color black */
     background-color: #fff; /* White background initially */
@@ -66,7 +65,6 @@ nav a:hover {
     color: #000; /* Keep text color black on hover */
     transform: scale(1.1);
 }
-
 
 .main-menu {
     list-style: none;
@@ -85,7 +83,6 @@ nav a:hover {
     border-radius: 5px;
     border: 1px solid #ddd;
 }
-
 
 /* Slogan section */
 .slogan-section {
@@ -116,9 +113,7 @@ nav a:hover {
 /* Applying the animation to the slogan */
 .slogan {
   animation: fadeInSlideUp 2s ease-in-out;
-  /* Adjust the duration and timing function as needed */
 }
-
 
 /* About Us section */
 .about-us-section {
@@ -192,10 +187,16 @@ nav a:hover {
 }
 
 .service-item p {
-    font-size: 20px;
+    font-size: 16px;
     color: #555;
 }
 
+.additional-services {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; /* Increased font size */
+    color: #555;
+}
 
 /* Pricing Section */
 .pricing-section {
@@ -208,11 +209,10 @@ nav a:hover {
 
 /* Container for pricing cards */
 .pricing-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Individual pricing card */
@@ -222,7 +222,7 @@ nav a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
-  min-width: 300px
+  min-width: 300px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -329,9 +329,11 @@ nav a:hover {
     width: 100%; /* Full width for inputs */
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid #333;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
 }
 
 .contact-form button {
@@ -349,6 +351,21 @@ nav a:hover {
 
 .contact-form button:hover {
     background-color: #555;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.contact-section a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
 }
 
 /* Back to Top Button */
@@ -400,6 +417,111 @@ nav a:hover {
     font-size: 14px; /* Smaller font size */
     color: #ccc; /* Light grey color for copyright text */
 }
+
+/* Get Started Section */
+.get-started-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.get-started-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.get-started-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+    .get-started-btn {
+        width: 100%;
+    }
+}
+
+/* Location Section */
+.location-section {
+    padding: 20px;
+    background-color: #000000; /* Lighter cold blue background */
+    text-align: center;
+}
+
+.location-section h1 {
+    font-size: 36px; /* Increased font size */
+    color: #fdfdfd; 
+    animation: fadeInSlideUp 2s ease-in-out; /* Animation */
+}
+
+.location-section p {
+    font-size: 24px; /* Increased font size */
+    color: #fbfcfd; 
+}
+
+/* Promotion Section */
+.promotion-section {
+    padding: 30px 20px;
+    background-color: #000000; /* Light cold blue background */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.promotion-section h2 {
+    font-size: 32px; /* Increased font size */
+    color: #FFFFFF; font-weight: bold; /* White and bold */
+    margin-bottom: 10px;
+    animation: pulseAndFade 2s infinite; /* New attention-grabbing animation */
+}
+
+.promotion-section p {
+    font-size: 20px; /* Increased font size */
+    color: #E0F0FF;
+    font-weight: bold;
+}
+
+.promotion-section a {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.promotion-section a:hover {
+    color: #4682b4;
+}
+
+/* Keyframes for pulse and fade animation */
+@keyframes pulseAndFade {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
 /* Mobile styling */
 @media only screen and (max-width: 600px) {
     .logo-container {
@@ -413,7 +535,6 @@ nav a:hover {
         width: 100%; /* Full width for each menu item */
         margin-bottom: 10px; /* Add space between menu items */
         text-align: center; /* Center text */
-
     }
     .services-container,
     .pricing-container {
@@ -432,5 +553,17 @@ nav a:hover {
     }
     .contact-form button {
         width: 50%;
+    }
+    .promotion-section h2 {
+        font-size: 24px;
+    }
+    .promotion-section p {
+        font-size: 16px;
+    }
+    .location-section h1 {
+        font-size: 28px;
+    }
+    .location-section p {
+        font-size: 16px;
     }
 }
