@@ -161,7 +161,8 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 2vw;
+    padding: 0 10px;
 }
 
 .service-item {
@@ -170,9 +171,9 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: 100%;
-    max-width: 280px; /* Increased from 250px */
-    margin: 10px auto; /* Adjusted margin for spacing */
+    flex: 1 1 calc(30% - 2vw);
+    max-width: 350px; /* Increased from 250px */
+    margin: 10px 0; /* Adjusted margin for spacing */
     box-sizing: border-box;
     text-align: center;
 }
@@ -220,7 +221,8 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 2vw;
+    padding: 0 10px;
 }
 
 /* Individual pricing card */
@@ -228,11 +230,11 @@ nav a:hover {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
+    flex: 1 1 calc(30% - 2vw);
+    max-width: 350px;
     min-width: 250px;
     padding: 20px;
-    margin: 5px auto;
+    margin: 5px 0;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -514,10 +516,12 @@ nav a:hover {
     .pricing-container {
         flex-direction: column;
         align-items: center;
+        gap: 15px
     }
     .service-item,
     .pricing-card {
         width: 100%;
+        max-width: 100%;
     }
     .additional-notes {
         padding: 10px;
@@ -539,6 +543,16 @@ nav a:hover {
     }
     .location-section p {
         font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .services-container,
+    .pricing-container {
+        gap: 20px; /* Fixed gap for large screens */
+    }
+    .service-item,
+    .pricing-card {
+        flex: 1 1 calc(30% - 20px); /* Adjust basis with fixed gap */
     }
 }
 
