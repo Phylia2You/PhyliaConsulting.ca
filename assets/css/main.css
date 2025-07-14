@@ -23,6 +23,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo-container {
@@ -32,7 +34,7 @@ header {
 }
 
 .logo {
-    max-height: 80px; /* Decreased logo size by 25% */
+    max-height: 80px;
     width: auto;
 }
 
@@ -42,27 +44,30 @@ nav {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Base styling for menu buttons */
 nav a {
-     list-style: none;
+    list-style: none;
     display: flex;
     gap: 5px;
     margin: 0;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000; /* Text color black */
-    background-color: #fff; /* White background initially */
+    color: #000;
+    background-color: #fff;
     border-radius: 5px;
-    border: 1px solid #ddd; /* Border to define button shape */
+    border: 1px solid #ddd;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect for menu buttons */
 nav a:hover {
-    background-color: #B0E0E6; /* Translucent turquoise */
-    color: #000; /* Keep text color black on hover */
+    background-color: #B0E0E6;
+    color: #000;
     transform: scale(1.1);
 }
 
@@ -72,6 +77,7 @@ nav a:hover {
     gap: 5px;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .main-menu a {
@@ -92,7 +98,7 @@ nav a:hover {
 }
 
 .slogan {
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     color: #333;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     margin: 0;
@@ -119,7 +125,7 @@ nav a:hover {
 .about-us-section {
     background: url('assets/images/Hero.png') no-repeat center center;
     background-size: cover;
-    background-color: #f0f0f0; /* Fallback color */
+    background-color: #f0f0f0;
     padding: 20px 20px;
     text-align: center;
     color: #000;
@@ -130,9 +136,9 @@ nav a:hover {
     border-radius: 10px;
     max-width: 700px;
     margin: 0 auto;
-    text-align: left; /* Left-aligned text */
-    font-size: 20px; /* Font size */
-    line-height: 1.6; /* Line spacing */
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .about-content h1 {
@@ -178,7 +184,7 @@ nav a:hover {
 
 /* Zoom effect on hover */
 .service-item:hover img {
-  transform: scale(1.1); /* Adjust the scale value as needed */
+  transform: scale(1.1);
 }
 
 .service-item h3 {
@@ -194,7 +200,7 @@ nav a:hover {
 .additional-services {
     margin-top: 20px;
     text-align: center;
-    font-size: 18px; /* Increased font size */
+    font-size: 18px;
     color: #555;
 }
 
@@ -217,14 +223,16 @@ nav a:hover {
 
 /* Individual pricing card */
 .pricing-card {
-  background: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  min-width: 300px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Pricing card hover effect */
@@ -238,7 +246,7 @@ nav a:hover {
   font-size: 24px;
   text-align: center;
   margin-bottom: 10px;
-  color: #007bff; /* Accent color */
+  color: #007bff;
 }
 
 /* Pricing card price */
@@ -270,18 +278,18 @@ nav a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
-    max-width: 800px; /* Adjust as needed */
-    text-align: left; /* Align text to the left */
+    max-width: 800px;
+    text-align: left;
 }
 
 .additional-notes h2 {
-    font-size: 20px; /* Font size for titles */
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
 }
 
 .additional-notes p {
-    font-size: 16px; /* Font size for descriptions */
+    font-size: 16px;
     color: #555;
     line-height: 1.6;
 }
@@ -312,13 +320,13 @@ nav a:hover {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    max-width: 600px; /* Set form width */
+    align-items: flex-start;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .contact-form label {
-    align-self: flex-start; /* Align labels to the left */
+    align-self: flex-start;
     font-size: 20px;
     color: #333;
     margin-bottom: 5px;
@@ -326,7 +334,7 @@ nav a:hover {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%; /* Full width for inputs */
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid #333;
@@ -337,7 +345,7 @@ nav a:hover {
 }
 
 .contact-form button {
-    width: 25%; /* Set button width to 25% */
+    width: 25%;
     padding: 10px;
     background-color: #333;
     color: #fff;
@@ -346,7 +354,7 @@ nav a:hover {
     font-size: 20px;
     cursor: pointer;
     box-sizing: border-box;
-    margin-top: 10px; /* Add margin to separate button from textarea */
+    margin-top: 10px;
 }
 
 .contact-form button:hover {
@@ -370,52 +378,57 @@ nav a:hover {
 
 /* Back to Top Button */
 #backToTop {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 40px; /* Place the button at the bottom of the page */
-    right: 20px; /* Place the button 20px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #333; /* Dark background */
-    color: white; /* White text */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 10px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    max-width: 50px;
+    box-sizing: border-box;
 }
 
 #backToTop:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #555;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Center text */
-    padding: 20px 0; /* Vertical padding */
-    font-size: 18px; /* Increase font size */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .footer a {
-    color: #40e0d0; 
-    text-decoration: none; /* Remove underline */
-    margin: 0 10px; /* Space between links */
+    color: #40e0d0;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 .footer p {
-    margin: 10px 0; /* Margin for paragraphs */
+    margin: 10px 0;
 }
 
 .footer .copyright {
-    margin-top: 15px; /* Margin above copyright text */
-    font-size: 14px; /* Smaller font size */
-    color: #ccc; /* Light grey color for copyright text */
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
 }
 
 /* Get Started Section */
@@ -456,11 +469,16 @@ nav a:hover {
     .logo-container {
         justify-content: center;
     }
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
     nav {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 10px 0;
+        padding: 0;
+        margin-top: 10px;
     }
     .main-menu {
         flex-direction: column;
@@ -483,6 +501,7 @@ nav a:hover {
         border-radius: 5px;
         text-decoration: none;
         color: #000;
+        box-sizing: border-box;
     }
     .main-menu a:hover {
         background-color: #B0E0E6;
@@ -523,40 +542,40 @@ nav a:hover {
 /* Location Section */
 .location-section {
     padding: 20px;
-    background-color: #e6f0fa; /* Lighter cold blue background */
+    background-color: #e6f0fa;
     text-align: center;
 }
 
 .location-section h1 {
-    font-size: 36px; /* Increased font size */
-    color: #104E8B; /* Darker blue */
-    animation: fadeInSlideUp 2s ease-in-out; /* Animation */
+    font-size: 36px;
+    color: #104E8B;
+    animation: fadeInSlideUp 2s ease-in-out;
 }
 
 .location-section p {
-    font-size: 20px; /* Increased font size */
-    color: #4682b4; /* Steel blue for better visibility */
+    font-size: 20px;
+    color: #4682b4;
 }
 
 /* Promotion Section */
 .promotion-section {
     padding: 30px 20px;
-    background-color: #4682B4; /* Steel blue background */
+    background-color: #4682B4;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .promotion-section h2 {
-    font-size: 32px; /* Increased font size */
-    color: #FFFFFF; /* White for visibility */
+    font-size: 32px;
+    color: #FFFFFF;
     font-weight: bold;
     margin-bottom: 10px;
-    animation: pulseAndFade 2s infinite; /* New attention-grabbing animation */
+    animation: pulseAndFade 2s infinite;
 }
 
 .promotion-section p {
-    font-size: 20px; /* Increased font size */
-    color: #E0F0FF; /* Light blue for visibility */
+    font-size: 20px;
+    color: #E0F0FF;
     font-weight: bold;
 }
 
