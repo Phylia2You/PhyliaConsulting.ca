@@ -453,88 +453,40 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    .get-started-btn {
-        width: 100%;
-    }
-}
-
-/* Location Section */
-.location-section {
-    padding: 20px;
-    background-color: #000000; /* Lighter cold blue background */
-    text-align: center;
-}
-
-.location-section h1 {
-    font-size: 36px; /* Increased font size */
-    color: #fdfdfd; 
-    animation: fadeInSlideUp 2s ease-in-out; /* Animation */
-}
-
-.location-section p {
-    font-size: 24px; /* Increased font size */
-    color: #fbfcfd; 
-}
-
-/* Promotion Section */
-.promotion-section {
-    padding: 30px 20px;
-    background-color: #000000; /* Light cold blue background */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.promotion-section h2 {
-    font-size: 32px; /* Increased font size */
-    color: #FFFFFF; font-weight: bold; /* White and bold */
-    margin-bottom: 10px;
-    animation: pulseAndFade 2s infinite; /* New attention-grabbing animation */
-}
-
-.promotion-section p {
-    font-size: 20px; /* Increased font size */
-    color: #E0F0FF;
-    font-weight: bold;
-}
-
-.promotion-section a {
-    color: #1e90ff;
-    text-decoration: underline;
-}
-
-.promotion-section a:hover {
-    color: #4682b4;
-}
-
-/* Keyframes for pulse and fade animation */
-@keyframes pulseAndFade {
-  0% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-}
-
-/* Mobile styling */
-@media only screen and (max-width: 600px) {
     .logo-container {
         justify-content: center;
     }
     nav {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 10px 0;
     }
-    .nav a {
-        width: 100%; /* Full width for each menu item */
-        margin-bottom: 10px; /* Add space between menu items */
-        text-align: center; /* Center text */
+    .main-menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .main-menu li {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .main-menu a {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: 12px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #000;
+    }
+    .main-menu a:hover {
+        background-color: #B0E0E6;
+        transform: scale(1.05);
     }
     .services-container,
     .pricing-container {
@@ -566,4 +518,69 @@ nav a:hover {
     .location-section p {
         font-size: 16px;
     }
+}
+
+/* Location Section */
+.location-section {
+    padding: 20px;
+    background-color: #e6f0fa; /* Lighter cold blue background */
+    text-align: center;
+}
+
+.location-section h1 {
+    font-size: 36px; /* Increased font size */
+    color: #104E8B; /* Darker blue */
+    animation: fadeInSlideUp 2s ease-in-out; /* Animation */
+}
+
+.location-section p {
+    font-size: 20px; /* Increased font size */
+    color: #4682b4; /* Steel blue for better visibility */
+}
+
+/* Promotion Section */
+.promotion-section {
+    padding: 30px 20px;
+    background-color: #4682B4; /* Steel blue background */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.promotion-section h2 {
+    font-size: 32px; /* Increased font size */
+    color: #FFFFFF; /* White for visibility */
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: pulseAndFade 2s infinite; /* New attention-grabbing animation */
+}
+
+.promotion-section p {
+    font-size: 20px; /* Increased font size */
+    color: #E0F0FF; /* Light blue for visibility */
+    font-weight: bold;
+}
+
+.promotion-section a {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.promotion-section a:hover {
+    color: #4682b4;
+}
+
+/* Keyframes for pulse and fade animation */
+@keyframes pulseAndFade {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
 }
