@@ -12,9 +12,7 @@
     event.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
     if (!endpoint) {
-      const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('
-
-');
+      const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n\n');
       const mailto = `mailto:joanna@phyliaconsulting.ca?subject=${encodeURIComponent('Phylia mini-audit request')}&body=${encodeURIComponent(body)}`;
       show('Airtable endpoint is not connected yet. Opening your email app as a safe fallback.', true);
       window.location.href = mailto;
@@ -29,7 +27,7 @@
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       form.reset();
-      show('Thank you — your request was sent.', true);
+      show('Thank you. Your request was sent.', true);
     } catch (error) {
       show('Something went wrong. Please email Joanna directly or try again later.');
     }
