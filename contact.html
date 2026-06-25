@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Questionnaire | PhyliA Consulting</title>
+    <meta name="description" content="Request a PhyliA Consulting mini-audit for customer inquiries, replies, follow-ups, and AI-friendly admin workflows.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PhyliA Consulting home"><img src="assets/images/Final_Source_Files.png" alt="PhyliA Consulting logo"></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#starter-options">Options</a>
+        <a href="contact.html">Questionnaire</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Mini-audit questionnaire</p>
+        <h1>Tell me what feels messy in your customer replies or admin process.</h1>
+        <p>This form is designed to collect enough context for a practical first recommendation. Please do not include private client, medical, legal, financial, or password information.</p>
+      </section>
+
+      <section class="section form-section">
+        <form class="contact-form" data-contact-form>
+          <div class="form-grid">
+            <label>Business name<input name="businessName" required autocomplete="organization"></label>
+            <label>Contact name<input name="contactName" required autocomplete="name"></label>
+            <label>Email<input name="email" type="email" required autocomplete="email"></label>
+            <label>Phone<input name="phone" autocomplete="tel"></label>
+            <label>Business type<input name="businessType" placeholder="Wellness, real estate, professional services..."></label>
+            <label>Website<input name="website" type="url" placeholder="https://"></label>
+            <label class="full">Location<input name="location" placeholder="City / region"></label>
+            <label class="full">What is the main admin or customer-response problem?<textarea name="mainProblem" required rows="4"></textarea></label>
+            <label class="full">Where do customers contact you?<textarea name="contactChannels" rows="3" placeholder="Phone, email, website form, Facebook, Instagram, booking app..."></textarea></label>
+            <label class="full">What questions do customers ask repeatedly?<textarea name="commonQuestions" rows="4"></textarea></label>
+            <label class="full">Which replies do you type over and over?<textarea name="repeatedReplies" rows="4"></textarea></label>
+            <label class="full">How do you currently follow up?<textarea name="followUpProcess" rows="3"></textarea></label>
+            <label class="full">What tools do you currently use?<textarea name="toolsUsed" rows="3" placeholder="Email, Airtable, Google Workspace, booking app, CRM, spreadsheets..."></textarea></label>
+            <label>Preferred tone
+              <select name="preferredTone">
+                <option>Warm</option><option>Professional</option><option>Brief</option><option>Friendly</option><option>Not sure</option>
+              </select>
+            </label>
+            <label>Anonymous case study?
+              <select name="caseStudyPermission">
+                <option>Ask me later</option><option>Yes</option><option>No</option>
+              </select>
+            </label>
+            <label class="full">Topics that should never be answered automatically<textarea name="sensitiveTopics" rows="3"></textarea></label>
+          </div>
+          <p class="privacy-note">Note: the public site does not store passwords, payment details, or private client records. File uploads should be shared only after we agree on a safe method.</p>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Send questionnaire</button>
+            <a class="button secondary" href="index.html">Back to homepage</a>
+          </div>
+          <p class="form-status" data-form-status></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; 2026 PhyliA Consulting.</p><p>Practical AI and admin systems for small businesses.</p></footer>
+  </body>
+</html>
