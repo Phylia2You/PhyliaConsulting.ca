@@ -92,7 +92,7 @@ a { color: inherit; }
 .eyebrow, .section-kicker { margin: 0 0 14px; color: var(--primary); font-size: .78rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 h1, h2, h3, p { overflow-wrap: anywhere; }
 h1 { max-width: 800px; margin: 0; font-size: clamp(2.6rem, 6.4vw, 5.9rem); line-height: .95; letter-spacing: -.055em; }
-h2 { margin: 0; font-size: clamp(2rem, 4.4vw, 4rem); line-height: 1.02; letter-spacing: -.045em; }
+h2 { margin: 0; font-size: clamp(1.5rem, 3.2vw, 2.75rem); line-height: 1.1; letter-spacing: -.035em; }
 h3 { margin: 0 0 10px; font-size: 1.14rem; line-height: 1.18; }
 .hero-copy > p:not(.eyebrow), .page-hero > p { max-width: 670px; margin: 24px 0 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.28rem); }
 .hero-art { position: relative; isolation: isolate; }
