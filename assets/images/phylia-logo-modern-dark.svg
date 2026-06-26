@@ -2,12 +2,19 @@
   <title id="title">Phylia Consulting logo</title>
   <desc id="desc">A modern sans-serif Phylia Consulting wordmark with a small teal flow accent for dark mode.</desc>
   <defs>
-    <linearGradient id="tealBlue" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#52f0e4"/>
+    <linearGradient id="traceFade" x1="15" y1="32" x2="92" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#52f0e4" stop-opacity="0.16"/>
+      <stop offset="0.42" stop-color="#52f0e4" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#72a5ff" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="traceLead" x1="38" y1="23" x2="92" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#52f0e4" stop-opacity="0"/>
+      <stop offset="0.34" stop-color="#52f0e4" stop-opacity="0.78"/>
       <stop offset="1" stop-color="#72a5ff"/>
     </linearGradient>
   </defs>
   <text x="0" y="55" font-family="Avenir Next, Montserrat, Trebuchet MS, Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="-2.2" fill="#e8fbff">Phylia</text>
-  <path d="M15 32C34 18 63 15 92 24" fill="none" stroke="url(#tealBlue)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M15 32C34 18 63 15 92 24" fill="none" stroke="url(#traceFade)" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M37 23C53 17 74 18 92 24" fill="none" stroke="url(#traceLead)" stroke-width="4.6" stroke-linecap="round"/>
   <text x="4" y="79" font-family="Avenir Next, Montserrat, Trebuchet MS, Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="4.3" fill="#52f0e4">CONSULTING</text>
 </svg>
