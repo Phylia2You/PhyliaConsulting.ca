@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phylia Logo Test Concepts</title>
+    <style>
+      :root { color-scheme: light; --ink:#071d35; --muted:#51677f; --line:#cfe7ef; --accent:#17c9c2; --bg:#f4fbff; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: radial-gradient(circle at 10% 0%, #dff9f7 0, transparent 30rem), var(--bg); color: var(--ink); }
+      main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+      header { margin-bottom: 32px; }
+      a { color: #075b74; }
+      h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 4.5rem); letter-spacing: -0.05em; line-height: 0.95; }
+      p { margin: 0; color: var(--muted); font-size: 1.1rem; line-height: 1.6; max-width: 64ch; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+      article { background: rgba(255,255,255,.86); border: 1px solid var(--line); border-radius: 28px; padding: 16px; box-shadow: 0 22px 60px rgba(7,29,53,.10); }
+      img { display: block; width: 100%; height: auto; border-radius: 18px; background: white; }
+      h2 { margin: 16px 0 8px; font-size: 1.12rem; }
+      .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: white; text-decoration: none; font-weight: 700; }
+      .button.primary { background: linear-gradient(135deg, #17c9c2, #2f7df0); color: white; border-color: transparent; }
+      @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Phylia logo test concepts</h1>
+        <p>Three quick visual directions for the softer Phylia identity. These are test images only, not final production logo files.</p>
+      </header>
+      <section class="grid" aria-label="Logo concepts">
+        <article>
+          <img src="phylia-logo-concept-1-soft-monogram.png" alt="Phylia logo concept 1, soft monogram">
+          <h2>Concept 1: Soft Monogram</h2>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-1-soft-monogram.png">Open PNG</a></div>
+        </article>
+        <article>
+          <img src="phylia-logo-concept-2-organized-flow.png" alt="Phylia logo concept 2, organized flow">
+          <h2>Concept 2: Organized Flow</h2>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-2-organized-flow.png">Open PNG</a></div>
+        </article>
+        <article>
+          <img src="phylia-logo-concept-3-quiet-wordmark.png" alt="Phylia logo concept 3, quiet wordmark">
+          <h2>Concept 3: Quiet Wordmark</h2>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-3-quiet-wordmark.png">Open PNG</a></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
