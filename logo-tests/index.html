@@ -13,10 +13,12 @@
       a { color: #075b74; }
       h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 4.5rem); letter-spacing: -0.05em; line-height: 0.95; }
       p { margin: 0; color: var(--muted); font-size: 1.1rem; line-height: 1.6; max-width: 64ch; }
-      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+      .note { margin-top: 14px; padding: 14px 16px; border-left: 4px solid var(--accent); background: rgba(255,255,255,.72); border-radius: 0 18px 18px 0; }
+      h2.section-title { margin: 42px 0 0; font-size: 1.3rem; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 18px; }
       article { background: rgba(255,255,255,.86); border: 1px solid var(--line); border-radius: 28px; padding: 16px; box-shadow: 0 22px 60px rgba(7,29,53,.10); }
       img { display: block; width: 100%; height: auto; border-radius: 18px; background: white; }
-      h2 { margin: 16px 0 8px; font-size: 1.12rem; }
+      h3 { margin: 16px 0 8px; font-size: 1.12rem; }
       .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
       .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: white; text-decoration: none; font-weight: 700; }
       .button.primary { background: linear-gradient(135deg, #17c9c2, #2f7df0); color: white; border-color: transparent; }
@@ -27,22 +29,44 @@
     <main>
       <header>
         <h1>Phylia logo test concepts</h1>
-        <p>Three quick visual directions for the softer Phylia identity. These are test images only, not final production logo files.</p>
+        <p>Round 2 focuses more on the flow idea, a clearer P shape, and less wording. These are test images only, not final production logo files.</p>
+        <p class="note">Jojo's note: concept 2 had the best direction, so the newer options build from that calmer flow language.</p>
       </header>
-      <section class="grid" aria-label="Logo concepts">
+
+      <h2 class="section-title">Round 2</h2>
+      <section class="grid" aria-label="Round 2 logo concepts">
+        <article>
+          <img src="phylia-logo-concept-4-flow-p.png" alt="Phylia logo concept 4, flow P">
+          <h3>Concept 4: Flow P</h3>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-4-flow-p.png">Open PNG</a></div>
+        </article>
+        <article>
+          <img src="phylia-logo-concept-5-calm-path.png" alt="Phylia logo concept 5, calm path">
+          <h3>Concept 5: Calm Path</h3>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-5-calm-path.png">Open PNG</a></div>
+        </article>
+        <article>
+          <img src="phylia-logo-concept-6-nav-ready.png" alt="Phylia logo concept 6, nav ready">
+          <h3>Concept 6: Nav Ready</h3>
+          <div class="actions"><a class="button primary" href="phylia-logo-concept-6-nav-ready.png">Open PNG</a></div>
+        </article>
+      </section>
+
+      <h2 class="section-title">Round 1</h2>
+      <section class="grid" aria-label="Round 1 logo concepts">
         <article>
           <img src="phylia-logo-concept-1-soft-monogram.png" alt="Phylia logo concept 1, soft monogram">
-          <h2>Concept 1: Soft Monogram</h2>
+          <h3>Concept 1: Soft Monogram</h3>
           <div class="actions"><a class="button primary" href="phylia-logo-concept-1-soft-monogram.png">Open PNG</a></div>
         </article>
         <article>
           <img src="phylia-logo-concept-2-organized-flow.png" alt="Phylia logo concept 2, organized flow">
-          <h2>Concept 2: Organized Flow</h2>
+          <h3>Concept 2: Organized Flow</h3>
           <div class="actions"><a class="button primary" href="phylia-logo-concept-2-organized-flow.png">Open PNG</a></div>
         </article>
         <article>
           <img src="phylia-logo-concept-3-quiet-wordmark.png" alt="Phylia logo concept 3, quiet wordmark">
-          <h2>Concept 3: Quiet Wordmark</h2>
+          <h3>Concept 3: Quiet Wordmark</h3>
           <div class="actions"><a class="button primary" href="phylia-logo-concept-3-quiet-wordmark.png">Open PNG</a></div>
         </article>
       </section>
