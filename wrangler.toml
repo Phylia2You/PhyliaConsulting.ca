@@ -1,0 +1,8 @@
+name = "phylia-contact-form"
+main = "worker/phylia-airtable-form-worker.js"
+compatibility_date = "2026-06-26"
+
+[vars]
+AIRTABLE_BASE_ID = "appeAO1DmgjwwZ5ZQ"
+AIRTABLE_TABLE_NAME = "Inquiries"
+ALLOWED_ORIGINS = "https://phyliaconsulting.ca,https://www.phyliaconsulting.ca,https://phylia2you.github.io"

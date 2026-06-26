@@ -3,7 +3,8 @@
 // AIRTABLE_API_KEY = Airtable PAT with data.records:write for the Phylia2You Contacts base
 // AIRTABLE_BASE_ID = appeAO1DmgjwwZ5ZQ
 // AIRTABLE_TABLE_NAME = Inquiries
-// ALLOWED_ORIGIN = https://phylia2you.github.io
+// ALLOWED_ORIGINS = comma-separated allowed website origins, e.g.
+// https://phyliaconsulting.ca,https://www.phyliaconsulting.ca,https://phylia2you.github.io
 
 const fields = {
   businessName: 'Business Name',
@@ -27,15 +28,19 @@ const fields = {
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
-    const allowed = env.ALLOWED_ORIGIN || 'https://phylia2you.github.io';
+    const allowedOrigins = (env.ALLOWED_ORIGINS || 'https://phyliaconsulting.ca,https://www.phyliaconsulting.ca,https://phylia2you.github.io')
+      .split(',')
+      .map((value) => value.trim())
+      .filter(Boolean);
+    const allowedOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
     const cors = {
-      'Access-Control-Allow-Origin': allowed,
+      'Access-Control-Allow-Origin': allowedOrigin,
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     };
     if (request.method === 'OPTIONS') return new Response(null, { headers: cors });
     if (request.method !== 'POST') return new Response('Method not allowed', { status: 405, headers: cors });
-    if (origin && !origin.startsWith(allowed)) return new Response('Origin not allowed', { status: 403, headers: cors });
+    if (origin && !allowedOrigins.includes(origin)) return new Response('Origin not allowed', { status: 403, headers: cors });
 
     const input = await request.json();
     const airtableFields = {
