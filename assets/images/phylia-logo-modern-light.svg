@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="86" viewBox="0 0 326 86" role="img" aria-labelledby="title desc">
+  <title id="title">Phylia Consulting logo</title>
+  <desc id="desc">A modern sans-serif Phylia Consulting wordmark with a small teal flow accent.</desc>
+  <defs>
+    <linearGradient id="tealBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18c9bf"/>
+      <stop offset="1" stop-color="#2f7df0"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="55" font-family="Avenir Next, Montserrat, Trebuchet MS, Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="-2.2" fill="#071d35">Phylia</text>
+  <path d="M15 32C34 18 63 15 92 24" fill="none" stroke="url(#tealBlue)" stroke-width="6" stroke-linecap="round"/>
+  <text x="4" y="79" font-family="Avenir Next, Montserrat, Trebuchet MS, Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="4.3" fill="#0c5b73">CONSULTING</text>
+</svg>
