@@ -135,7 +135,7 @@ h3 { margin: 0 0 10px; font-size: 1.14rem; line-height: 1.18; }
 .process, .pricing { background: color-mix(in srgb, var(--panel) 88%, transparent); border-bottom: 1px solid var(--line); }
 .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .process-grid span { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-bottom: 18px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 24%, var(--panel)); color: var(--primary-dark); font-weight: 900; }
-.pricing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pricing-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .price-card { position: relative; min-height: 285px; }
 .price-card.featured { border-color: color-mix(in srgb, var(--accent) 68%, var(--line)); background: linear-gradient(180deg, color-mix(in srgb, var(--panel-soft) 56%, var(--panel)), color-mix(in srgb, var(--panel) 94%, transparent)); }
 .price-card.featured::before { content: "Often a good first paid step"; display: inline-flex; margin-bottom: 16px; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 22%, var(--panel)); color: var(--primary-dark); font-size: .78rem; font-weight: 900; }
