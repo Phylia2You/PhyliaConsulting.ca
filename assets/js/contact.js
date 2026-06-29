@@ -13,7 +13,7 @@
     const data = Object.fromEntries(new FormData(form).entries());
     if (!endpoint) {
       const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n\n');
-      const mailto = `mailto:joanna@phyliaconsulting.ca?subject=${encodeURIComponent('Phylia mini-audit request')}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:phyliaconsulting@gmail.com?subject=${encodeURIComponent('Phylia mini-audit request')}&body=${encodeURIComponent(body)}`;
       show('Airtable endpoint is not connected yet. Opening your email app as a safe fallback.', true);
       window.location.href = mailto;
       return;
