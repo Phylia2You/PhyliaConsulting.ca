@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Start a Project | Phylia Consulting</title>
-    <meta name="description" content="Tell Phylia Consulting about your website, form integration, inquiry workflow, CRM, or small-business technology project.">
+    <meta name="description" content="Tell Phylia Consulting about your website, form integration, network, Wi-Fi, voice, CRM, automation, or small-business IT project.">
     <link rel="stylesheet" href="assets/css/main.css?v=modernlogo">
+    <link rel="stylesheet" href="assets/css/project-form.css?v=1">
     <script>window.PHYLIA_FORM_ENDPOINT = 'https://phylia-contact-form.phyliaconsulting.workers.dev';</script>
     <script src="assets/js/theme.js?v=8f1pilot" defer></script>
-    <script src="assets/js/contact.js?v=projectform" defer></script>
+    <script src="assets/js/contact.js?v=projectform2" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -26,15 +27,15 @@
     <main>
       <section class="page-hero" data-reveal>
         <p class="eyebrow">Project questionnaire</p>
-        <h1>Tell me the basics. We can work out the technical details together.</h1>
-        <p>You do not need a finished plan, page list, or technical brief. Start with what your business needs and what you would like to improve. Please do not include passwords, payment details, or private customer information.</p>
+        <h1>Tell me what you need. You do not need to know the technical details.</h1>
+        <p>Choose any options that sound relevant, then describe the goal in your own words. Most questions are optional. Please do not include passwords, payment details, or private customer information.</p>
       </section>
 
       <section class="section form-section" data-reveal>
         <form class="contact-form" data-contact-form>
           <div class="form-intro">
             <h2>Start with the essentials.</h2>
-            <p>Only the first few fields are required. The optional section helps me prepare a more accurate recommendation, but it is completely fine to leave questions blank.</p>
+            <p>The quick selections make this faster. It is completely fine to choose “Not sure yet” and leave the optional section blank.</p>
           </div>
 
           <div class="form-grid">
@@ -42,42 +43,105 @@
             <label>Contact name<span class="field-help">Who should I reply to?</span><input name="contactName" required autocomplete="name"></label>
             <label>Email<span class="field-help">Used only to respond to this request.</span><input name="email" type="email" required autocomplete="email"></label>
             <label>Phone<span class="field-help">Optional.</span><input name="phone" autocomplete="tel"></label>
-            <label>What kind of help are you looking for?<span class="field-help">Choose the closest option. It does not need to be exact.</span>
-              <select name="businessType">
-                <option>New business website</option>
-                <option>Website redesign</option>
-                <option>Website with forms or integrations</option>
-                <option>CRM or inquiry tracking</option>
-                <option>Workflow automation</option>
-                <option>Website maintenance or technical support</option>
-                <option>Not sure yet</option>
-              </select>
-            </label>
             <label>Current website<span class="field-help">Optional. Include it if you already have one.</span><input name="website" type="url" placeholder="https://"></label>
-            <label class="full">Location<span class="field-help">City or region, especially if local context matters.</span><input name="location" placeholder="City / region"></label>
-            <label class="full">What would you like to build, fix, or improve?<span class="field-help">Describe the problem in your own words. A rough idea is enough.</span><textarea name="mainProblem" required rows="5" placeholder="For example: I need a professional website, customers need a better way to request quotes, or I keep losing track of inquiries."></textarea></label>
+            <label>Location<span class="field-help">City or region.</span><input name="location" placeholder="City / region"></label>
+          </div>
+
+          <fieldset class="choice-section">
+            <legend>What do you need help with?</legend>
+            <p class="field-help">Select all that apply.</p>
+            <div class="choice-grid">
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="One-page starter website"><span>One-page starter website</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="New business website"><span>New business website</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Website redesign"><span>Website redesign</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Contact or quote form"><span>Contact or quote form</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Online store or payments"><span>Online store or payments</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Booking or appointment setup"><span>Booking or appointment setup</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="CRM or inquiry tracking"><span>CRM or inquiry tracking</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Workflow automation"><span>Workflow automation</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Business network setup"><span>Business network setup</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Wi-Fi setup or troubleshooting"><span>Wi-Fi setup or troubleshooting</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Business phone or voice services"><span>Business phone or voice services</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Domain, DNS, email, or hosting help"><span>Domain, DNS, email, or hosting help</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Website maintenance or technical support"><span>Website maintenance or technical support</span></label>
+              <label class="choice-card"><input type="checkbox" name="helpNeeded" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <label class="full">What would you like to build, fix, or improve?<span class="field-help">A rough description is enough.</span><textarea name="mainProblem" required rows="5" placeholder="For example: I need a professional website, our Wi-Fi is unreliable, or customers need a better way to request quotes."></textarea></label>
           </div>
 
           <details>
             <summary><strong>Add optional project details</strong> — helpful, but not required</summary>
-            <div class="form-grid">
-              <label class="full">What should the website or system help customers do?<span class="field-help">For example: learn about services, request a quote, book, buy, upload photos, or ask questions.</span><textarea name="commonQuestions" rows="4"></textarea></label>
-              <label class="full">Are there any forms, features, or integrations you already know you need?<span class="field-help">Examples: contact form, quote form, photo upload, email notification, database, CRM, booking, payments, or ecommerce.</span><textarea name="repeatedReplies" rows="4"></textarea></label>
-              <label class="full">What do you already have?<span class="field-help">Logo, photos, written content, domain name, hosting, business email, existing website, or brand colours.</span><textarea name="toolsUsed" rows="4"></textarea></label>
-              <label class="full">Do you have a preferred timeline or approximate budget?<span class="field-help">It is fine to say “not sure.” This helps me recommend a realistic starting point.</span><textarea name="followUpProcess" rows="3"></textarea></label>
-              <label>Preferred tone
-                <span class="field-help">How should the website or customer-facing content sound?</span>
-                <select name="preferredTone">
-                  <option>Professional</option><option>Warm</option><option>Brief</option><option>Friendly</option><option>Not sure</option>
-                </select>
-              </label>
-              <label>Ongoing website care
-                <span class="field-help">Maintenance is optional.</span>
-                <select name="caseStudyPermission">
-                  <option>Not sure yet</option><option>Yes, please include an option</option><option>No, not needed</option>
-                </select>
-              </label>
-              <label class="full">Anything else I should know?<span class="field-help">Examples: websites you like, accessibility needs, approval process, sensitive topics, or services you do not want included.</span><textarea name="sensitiveTopics" rows="4"></textarea></label>
+            <div class="optional-content">
+              <fieldset class="choice-section">
+                <legend>Which features or outcomes may be useful?</legend>
+                <p class="field-help">Select anything you are considering. These choices are not a commitment.</p>
+                <div class="choice-grid">
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Explain services clearly"><span>Explain services clearly</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Request a quote"><span>Request a quote</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Upload photos or files"><span>Upload photos or files</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Book an appointment"><span>Book an appointment</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Accept payments"><span>Accept payments</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Sell products"><span>Sell products</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Send email or Discord notifications"><span>Send notifications</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Save inquiries to a CRM or database"><span>Save inquiries to a CRM or database</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Improve office or shop connectivity"><span>Improve connectivity</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Set up business phone or voice services"><span>Set up business voice</span></label>
+                  <label class="choice-card"><input type="checkbox" name="featuresNeeded" value="Not sure yet"><span>Not sure yet</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-section">
+                <legend>What do you already have?</legend>
+                <div class="choice-grid">
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Logo"><span>Logo</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Photos"><span>Photos</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Written content"><span>Written content</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Domain name"><span>Domain name</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Hosting"><span>Hosting</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Business email"><span>Business email</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Network equipment"><span>Network equipment</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Phone or voice system"><span>Phone or voice system</span></label>
+                  <label class="choice-card"><input type="checkbox" name="existingAssets" value="Not sure"><span>Not sure</span></label>
+                </div>
+              </fieldset>
+
+              <div class="form-grid">
+                <label>Approximate budget<span class="field-help">It is fine to choose “Not sure yet.”</span>
+                  <select name="budgetRange">
+                    <option>Not sure yet</option>
+                    <option>Under $750 CAD</option>
+                    <option>$750–$1,250 CAD</option>
+                    <option>$1,250–$2,000 CAD</option>
+                    <option>$2,000–$5,000 CAD</option>
+                    <option>Over $5,000 CAD</option>
+                  </select>
+                </label>
+                <label>Preferred timeline<span class="field-help">Choose the closest option.</span>
+                  <select name="timeline">
+                    <option>No fixed deadline</option>
+                    <option>Within 2 weeks</option>
+                    <option>Within 1 month</option>
+                    <option>Within 2–3 months</option>
+                    <option>Just researching</option>
+                  </select>
+                </label>
+                <label>Ongoing website care<span class="field-help">Maintenance is optional.</span>
+                  <select name="maintenanceInterest">
+                    <option>Not sure yet</option>
+                    <option>Yes, please include an option</option>
+                    <option>No, not needed</option>
+                  </select>
+                </label>
+                <label>Preferred tone<span class="field-help">For customer-facing content.</span>
+                  <select name="preferredTone">
+                    <option>Professional</option><option>Warm</option><option>Brief</option><option>Friendly</option><option>Not sure</option>
+                  </select>
+                </label>
+                <label class="full">Anything else I should know?<span class="field-help">Examples: websites you like, current problems, accessibility needs, approval process, or vendor information.</span><textarea name="sensitiveTopics" rows="4"></textarea></label>
+              </div>
             </div>
           </details>
 
@@ -91,6 +155,6 @@
       </section>
     </main>
 
-    <footer class="site-footer"><p>&copy; 2026 Phylia Consulting. Custom websites, forms, and practical business systems.</p><p><a href="https://dashboard.phyliaconsulting.ca" rel="nofollow">Business dashboard</a></p></footer>
+    <footer class="site-footer"><p>&copy; 2026 Phylia Consulting. Websites, business systems, and practical IT support.</p><p><a href="https://dashboard.phyliaconsulting.ca" rel="nofollow">Business dashboard</a></p></footer>
   </body>
 </html>
