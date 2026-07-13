@@ -11,10 +11,49 @@
     status.className = ok ? 'form-status success' : 'form-status';
   };
 
+  const collectValues = (formData, key) =>
+    formData
+      .getAll(key)
+      .map((value) => String(value || '').trim())
+      .filter(Boolean);
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    const formData = new FormData(form);
+    const helpNeeded = collectValues(formData, 'helpNeeded');
+    const featuresNeeded = collectValues(formData, 'featuresNeeded');
+    const existingAssets = collectValues(formData, 'existingAssets');
+
+    const budgetRange = String(formData.get('budgetRange') || '').trim();
+    const timeline = String(formData.get('timeline') || '').trim();
+    const maintenanceInterest = String(formData.get('maintenanceInterest') || '').trim();
+
+    const data = {
+      businessName: String(formData.get('businessName') || '').trim(),
+      contactName: String(formData.get('contactName') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      phone: String(formData.get('phone') || '').trim(),
+      businessType: helpNeeded.length ? helpNeeded.join(', ') : 'Not specified',
+      website: String(formData.get('website') || '').trim(),
+      location: String(formData.get('location') || '').trim(),
+      mainProblem: String(formData.get('mainProblem') || '').trim(),
+      contactChannels: helpNeeded.length ? `Help requested: ${helpNeeded.join(', ')}` : '',
+      commonQuestions: featuresNeeded.length ? `Possible features or outcomes: ${featuresNeeded.join(', ')}` : '',
+      repeatedReplies: [
+        featuresNeeded.length ? `Features considered: ${featuresNeeded.join(', ')}` : '',
+        budgetRange ? `Approximate budget: ${budgetRange}` : '',
+        timeline ? `Preferred timeline: ${timeline}` : ''
+      ].filter(Boolean).join('\n'),
+      followUpProcess: [
+        timeline ? `Preferred timeline: ${timeline}` : '',
+        maintenanceInterest ? `Ongoing website care: ${maintenanceInterest}` : ''
+      ].filter(Boolean).join('\n'),
+      toolsUsed: existingAssets.length ? `Existing assets or systems: ${existingAssets.join(', ')}` : '',
+      preferredTone: String(formData.get('preferredTone') || '').trim(),
+      caseStudyPermission: maintenanceInterest || 'Not sure yet',
+      sensitiveTopics: String(formData.get('sensitiveTopics') || '').trim()
+    };
 
     if (!endpoint) {
       const body = Object.entries(data)
