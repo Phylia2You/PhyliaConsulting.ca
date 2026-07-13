@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css?v=modernlogo">
     <script>window.PHYLIA_FORM_ENDPOINT = 'https://phylia-contact-form.phyliaconsulting.workers.dev';</script>
     <script src="assets/js/theme.js?v=8f1pilot" defer></script>
-    <script src="assets/js/contact.js?v=8f1pilot" defer></script>
+    <script src="assets/js/contact.js?v=projectform" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -16,7 +16,8 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html#services">Services</a>
         <a href="index.html#process">Process</a>
-        <a href="index.html#starter-options">Options</a>
+        <a href="index.html#starter-options">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
         <a href="index.html">Home</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
       </nav>
@@ -25,44 +26,61 @@
     <main>
       <section class="page-hero" data-reveal>
         <p class="eyebrow">Project questionnaire</p>
-        <h1>Tell me what you want to build, improve, or connect.</h1>
-        <p>This form collects enough context for an initial recommendation about your website, forms, customer inquiries, workflow, or practical technology needs. Please do not include passwords, payment details, or private customer information.</p>
+        <h1>Tell me the basics. We can work out the technical details together.</h1>
+        <p>You do not need a finished plan, page list, or technical brief. Start with what your business needs and what you would like to improve. Please do not include passwords, payment details, or private customer information.</p>
       </section>
 
       <section class="section form-section" data-reveal>
         <form class="contact-form" data-contact-form>
           <div class="form-intro">
-            <h2>Share the useful context, not a perfect technical brief.</h2>
-            <p>Short answers are fine. Describe what you have now, what is not working, and what a successful result would look like.</p>
+            <h2>Start with the essentials.</h2>
+            <p>Only the first few fields are required. The optional section helps me prepare a more accurate recommendation, but it is completely fine to leave questions blank.</p>
           </div>
+
           <div class="form-grid">
             <label>Business name<span class="field-help">The name customers recognize.</span><input name="businessName" required autocomplete="organization"></label>
             <label>Contact name<span class="field-help">Who should I reply to?</span><input name="contactName" required autocomplete="name"></label>
             <label>Email<span class="field-help">Used only to respond to this request.</span><input name="email" type="email" required autocomplete="email"></label>
             <label>Phone<span class="field-help">Optional.</span><input name="phone" autocomplete="tel"></label>
-            <label>Business type<span class="field-help">A rough category is enough.</span><input name="businessType" placeholder="Machine shop, artist, professional service..."></label>
+            <label>What kind of help are you looking for?<span class="field-help">Choose the closest option. It does not need to be exact.</span>
+              <select name="businessType">
+                <option>New business website</option>
+                <option>Website redesign</option>
+                <option>Website with forms or integrations</option>
+                <option>CRM or inquiry tracking</option>
+                <option>Workflow automation</option>
+                <option>Website maintenance or technical support</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
             <label>Current website<span class="field-help">Optional. Include it if you already have one.</span><input name="website" type="url" placeholder="https://"></label>
             <label class="full">Location<span class="field-help">City or region, especially if local context matters.</span><input name="location" placeholder="City / region"></label>
-            <label class="full">What do you want to build or improve?<span class="field-help">This could be a website, redesign, quote form, contact process, inquiry tracker, CRM, automation, or another business system.</span><textarea name="mainProblem" required rows="4"></textarea></label>
-            <label class="full">Where do customers currently contact you?<span class="field-help">List every place messages arrive.</span><textarea name="contactChannels" rows="3" placeholder="Phone, email, website form, Facebook, Instagram, booking app..."></textarea></label>
-            <label class="full">What questions or requests do customers send repeatedly?<span class="field-help">Rough examples help identify what the website or workflow should handle.</span><textarea name="commonQuestions" rows="4"></textarea></label>
-            <label class="full">Which replies or tasks do you repeat?<span class="field-help">These may become templates, form fields, workflow steps, or automation opportunities.</span><textarea name="repeatedReplies" rows="4"></textarea></label>
-            <label class="full">How do you currently track and follow up?<span class="field-help">Email folders, notes, spreadsheets, memory, or an existing system all count.</span><textarea name="followUpProcess" rows="3"></textarea></label>
-            <label class="full">What tools do you currently use?<span class="field-help">Email, spreadsheets, booking apps, CRMs, website platforms, or anything else involved.</span><textarea name="toolsUsed" rows="3" placeholder="Email, Google Workspace, spreadsheet, CRM, website platform..."></textarea></label>
-            <label>Preferred tone
-              <span class="field-help">How should your customer-facing content sound?</span>
-              <select name="preferredTone">
-                <option>Warm</option><option>Professional</option><option>Brief</option><option>Friendly</option><option>Not sure</option>
-              </select>
-            </label>
-            <label>Anonymous case study?
-              <span class="field-help">You can decide later.</span>
-              <select name="caseStudyPermission">
-                <option>Ask me later</option><option>Yes</option><option>No</option>
-              </select>
-            </label>
-            <label class="full">Sensitive topics or boundaries<span class="field-help">For example: pricing exceptions, complaints, health, legal, financial, or confidential client details.</span><textarea name="sensitiveTopics" rows="3"></textarea></label>
+            <label class="full">What would you like to build, fix, or improve?<span class="field-help">Describe the problem in your own words. A rough idea is enough.</span><textarea name="mainProblem" required rows="5" placeholder="For example: I need a professional website, customers need a better way to request quotes, or I keep losing track of inquiries."></textarea></label>
           </div>
+
+          <details>
+            <summary><strong>Add optional project details</strong> — helpful, but not required</summary>
+            <div class="form-grid">
+              <label class="full">What should the website or system help customers do?<span class="field-help">For example: learn about services, request a quote, book, buy, upload photos, or ask questions.</span><textarea name="commonQuestions" rows="4"></textarea></label>
+              <label class="full">Are there any forms, features, or integrations you already know you need?<span class="field-help">Examples: contact form, quote form, photo upload, email notification, database, CRM, booking, payments, or ecommerce.</span><textarea name="repeatedReplies" rows="4"></textarea></label>
+              <label class="full">What do you already have?<span class="field-help">Logo, photos, written content, domain name, hosting, business email, existing website, or brand colours.</span><textarea name="toolsUsed" rows="4"></textarea></label>
+              <label class="full">Do you have a preferred timeline or approximate budget?<span class="field-help">It is fine to say “not sure.” This helps me recommend a realistic starting point.</span><textarea name="followUpProcess" rows="3"></textarea></label>
+              <label>Preferred tone
+                <span class="field-help">How should the website or customer-facing content sound?</span>
+                <select name="preferredTone">
+                  <option>Professional</option><option>Warm</option><option>Brief</option><option>Friendly</option><option>Not sure</option>
+                </select>
+              </label>
+              <label>Ongoing website care
+                <span class="field-help">Maintenance is optional.</span>
+                <select name="caseStudyPermission">
+                  <option>Not sure yet</option><option>Yes, please include an option</option><option>No, not needed</option>
+                </select>
+              </label>
+              <label class="full">Anything else I should know?<span class="field-help">Examples: websites you like, accessibility needs, approval process, sensitive topics, or services you do not want included.</span><textarea name="sensitiveTopics" rows="4"></textarea></label>
+            </div>
+          </details>
+
           <p class="privacy-note">The public site does not store passwords, payment details, or private client records. Files should be shared only after we agree on an appropriate method.</p>
           <div class="form-actions">
             <button class="button primary" type="submit">Send project questionnaire</button>
