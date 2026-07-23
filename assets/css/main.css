@@ -115,9 +115,9 @@ h3 { margin: 0 0 10px; font-size: 1.16rem; line-height: 1.22; }
 }
 .hero-ambient { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero-orb { position: absolute; border-radius: 50%; filter: blur(22px); opacity: .78; mix-blend-mode: screen; }
-.hero-orb-one { top: -34%; right: -8%; width: min(70vw, 980px); aspect-ratio: 1; background: radial-gradient(circle, rgba(37,99,235,.7), rgba(37,99,235,.1) 55%, transparent 72%); animation: aurora-one 8s ease-in-out infinite alternate; }
-.hero-orb-two { bottom: -46%; left: -12%; width: min(68vw, 900px); aspect-ratio: 1; background: radial-gradient(circle, rgba(56,189,248,.58), rgba(14,116,144,.12) 58%, transparent 74%); animation: aurora-two 10s ease-in-out infinite alternate; }
-.hero-orb-three { top: 8%; left: 36%; width: min(44vw, 620px); aspect-ratio: 1; background: radial-gradient(circle, rgba(96,165,250,.38), transparent 69%); animation: aurora-three 7s ease-in-out infinite alternate; }
+.hero-orb-one { top: -34%; right: -8%; width: min(70vw, 980px); aspect-ratio: 1; background: radial-gradient(circle, rgba(37,99,235,.7), rgba(37,99,235,.1) 55%, transparent 72%); animation: aurora-one 20s ease-in-out infinite alternate; }
+.hero-orb-two { bottom: -46%; left: -12%; width: min(68vw, 900px); aspect-ratio: 1; background: radial-gradient(circle, rgba(56,189,248,.58), rgba(14,116,144,.12) 58%, transparent 74%); animation: aurora-two 24s ease-in-out infinite alternate; }
+.hero-orb-three { top: 8%; left: 36%; width: min(44vw, 620px); aspect-ratio: 1; background: radial-gradient(circle, rgba(96,165,250,.38), transparent 69%); animation: aurora-three 18s ease-in-out infinite alternate; }
 .hero-sweep { position: absolute; inset: -20% -55%; background: linear-gradient(108deg, transparent 35%, rgba(186,230,253,.02) 43%, rgba(186,230,253,.16) 50%, rgba(96,165,250,.03) 58%, transparent 66%); transform: translateX(-30%); animation: hero-light-sweep 7s ease-in-out infinite; }
 .hero-network { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .82; }
 .network-path { fill: none; stroke: rgba(147,197,253,.34); stroke-width: 1.5; stroke-dasharray: 8 16; vector-effect: non-scaling-stroke; animation: network-flow 7s linear infinite; }
