@@ -16,17 +16,6 @@
     sync();
   });
 
-  const backToTop = document.querySelector('[data-back-to-top]');
-  const syncBackToTop = () => {
-    if (!backToTop) return;
-    const visible = window.scrollY > Math.max(500, window.innerHeight * 0.75);
-    backToTop.classList.toggle('is-visible', visible);
-    backToTop.setAttribute('aria-hidden', String(!visible));
-    backToTop.tabIndex = visible ? 0 : -1;
-  };
-  syncBackToTop();
-  window.addEventListener('scroll', syncBackToTop, { passive: true });
-
   const revealItems = document.querySelectorAll('[data-reveal]');
   if (!revealItems.length) return;
 

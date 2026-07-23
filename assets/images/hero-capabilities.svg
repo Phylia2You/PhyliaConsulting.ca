@@ -1,17 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" role="img" aria-labelledby="title desc">
-  <title id="title">Phylia services working together</title><desc id="desc">A central Phylia hub connects a business website, forms and systems, network connectivity, and ongoing support.</desc>
+  <title id="title">Connected business technology workspace</title>
+  <desc id="desc">A refined digital workspace brings a professional website, organized inquiries, reliable connectivity, and ongoing support into one coordinated view.</desc>
   <defs>
-    <linearGradient id="bg" x1="80" y1="40" x2="720" y2="610" gradientUnits="userSpaceOnUse"><stop stop-color="#eff8ff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
-    <linearGradient id="line" x1="180" y1="130" x2="650" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
-    <linearGradient id="logoTraceFade" x1="15" y1="32" x2="92" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#18c9bf" stop-opacity=".16"/><stop offset=".42" stop-color="#18c9bf" stop-opacity=".42"/><stop offset="1" stop-color="#2f7df0" stop-opacity=".94"/></linearGradient>
-    <linearGradient id="logoTraceLead" x1="38" y1="23" x2="92" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#18c9bf" stop-opacity="0"/><stop offset=".34" stop-color="#18c9bf" stop-opacity=".74"/><stop offset="1" stop-color="#2f7df0"/></linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0b2341" flood-opacity=".12"/></filter>
+    <linearGradient id="frame" x1="90" y1="70" x2="720" y2="590" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f4f8ff"/></linearGradient>
+    <linearGradient id="screen" x1="122" y1="175" x2="456" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#eaf5ff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#0b2341" flood-opacity=".15"/></filter>
+    <clipPath id="frameClip"><rect x="62" y="48" width="676" height="548" rx="30"/></clipPath>
   </defs>
-  <rect x="20" y="20" width="760" height="610" rx="54" fill="url(#bg)"/><circle cx="400" cy="325" r="210" fill="#fff" opacity=".42"/>
-  <path d="M282 210 352 286M518 210 448 286M282 440 352 364M518 440 448 364" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round" opacity=".65"/>
-  <g filter="url(#shadow)"><rect x="290" y="238" width="220" height="174" rx="32" fill="#fff"/><g transform="translate(322 270) scale(.9)"><text x="0" y="55" font-family="Avenir Next,Montserrat,Trebuchet MS,Arial,Helvetica,sans-serif" font-size="55" font-weight="800" letter-spacing="-2.2" fill="#071d35">Phylia</text><path d="M15 32C34 18 63 15 92 24" fill="none" stroke="url(#logoTraceFade)" stroke-width="7.5" stroke-linecap="round"/><path d="M37 23C53 17 74 18 92 24" fill="none" stroke="url(#logoTraceLead)" stroke-width="4.6" stroke-linecap="round"/><text x="4" y="79" font-family="Avenir Next,Montserrat,Trebuchet MS,Arial,Helvetica,sans-serif" font-size="14" font-weight="800" letter-spacing="4.3" fill="#0c5b73">CONSULTING</text></g><text x="400" y="386" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1" fill="#275b8f">ONE CONNECTED PARTNER</text></g>
-  <g filter="url(#shadow)"><rect x="74" y="74" width="218" height="146" rx="24" fill="#fff"/><rect x="102" y="100" width="162" height="82" rx="10" fill="#eaf4ff" stroke="#93c5fd" stroke-width="3"/><path d="M102 119h162" stroke="#93c5fd" stroke-width="3"/><circle cx="116" cy="110" r="3" fill="#2563eb"/><circle cx="127" cy="110" r="3" fill="#60a5fa"/><path d="M122 151h50M122 162h32" stroke="#6b8bad" stroke-width="6" stroke-linecap="round"/><rect x="191" y="139" width="49" height="27" rx="6" fill="#2563eb"/><text x="183" y="204" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#0b2341">Websites</text></g>
-  <g filter="url(#shadow)"><rect x="508" y="74" width="218" height="146" rx="24" fill="#fff"/><rect x="540" y="101" width="66" height="75" rx="9" fill="#eff6ff" stroke="#93c5fd" stroke-width="3"/><path d="M552 120h42M552 137h30M552 154h36" stroke="#6b8bad" stroke-width="5" stroke-linecap="round"/><rect x="627" y="101" width="67" height="75" rx="9" fill="#e0f2fe" stroke="#60a5fa" stroke-width="3"/><path d="m641 155 12-14 11 7 16-27" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M607 138h17" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/><text x="617" y="204" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#0b2341">Forms &amp; systems</text></g>
-  <g filter="url(#shadow)"><rect x="74" y="430" width="218" height="146" rx="24" fill="#fff"/><rect x="108" y="477" width="148" height="50" rx="10" fill="#eaf4ff" stroke="#93c5fd" stroke-width="3"/><circle cx="132" cy="502" r="7" fill="#2563eb"/><circle cx="154" cy="502" r="7" fill="#38bdf8"/><path d="M178 502h54" stroke="#6b8bad" stroke-width="6" stroke-linecap="round"/><path d="M157 469c14-13 38-13 52 0M168 458c8-7 21-7 29 0" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/><text x="183" y="552" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#0b2341">Connectivity</text></g>
-  <g filter="url(#shadow)"><rect x="508" y="430" width="218" height="146" rx="24" fill="#fff"/><path d="M617 456 653 470v23c0 20-14 32-36 39-22-7-36-19-36-39v-23l36-14Z" fill="#eaf4ff" stroke="#60a5fa" stroke-width="4"/><path d="m601 493 11 11 22-26" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="617" y="552" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#0b2341">Ongoing support</text></g>
+
+  <g filter="url(#shadow)">
+    <rect x="62" y="48" width="676" height="548" rx="30" fill="url(#frame)" stroke="#c8ddef" stroke-width="2"/>
+    <g clip-path="url(#frameClip)">
+      <rect x="62" y="48" width="676" height="62" fill="#0b2341"/>
+      <circle cx="92" cy="79" r="5" fill="#60a5fa"/><circle cx="110" cy="79" r="5" fill="#38bdf8"/><circle cx="128" cy="79" r="5" fill="#bfdbfe"/>
+      <text x="156" y="85" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="750" fill="#ffffff">Connected business workspace</text>
+      <rect x="620" y="65" width="88" height="28" rx="14" fill="#153a61" stroke="#4b7cab"/>
+      <circle cx="642" cy="79" r="5" fill="#38bdf8"/><text x="656" y="84" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="750" fill="#dbeafe">Ready</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="94" y="140" width="396" height="238" rx="20" fill="#ffffff" stroke="#ccdeef" stroke-width="2"/>
+    <text x="120" y="172" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="1" fill="#275b8f">PROFESSIONAL WEBSITE</text>
+    <rect x="120" y="192" width="344" height="154" rx="14" fill="url(#screen)" stroke="#a8caf0"/>
+    <rect x="120" y="192" width="344" height="28" rx="14" fill="#0f2d4c"/><rect x="120" y="207" width="344" height="13" fill="#0f2d4c"/>
+    <circle cx="138" cy="206" r="3.5" fill="#60a5fa"/><circle cx="151" cy="206" r="3.5" fill="#38bdf8"/>
+    <rect x="144" y="242" width="122" height="12" rx="6" fill="#6b8bad"/><rect x="144" y="265" width="176" height="8" rx="4" fill="#a6bdd2"/><rect x="144" y="282" width="144" height="8" rx="4" fill="#a6bdd2"/>
+    <rect x="144" y="310" width="82" height="20" rx="10" fill="#2563eb"/>
+    <rect x="340" y="240" width="94" height="76" rx="12" fill="#ffffff" opacity=".82"/><path d="M356 296c16-24 34-18 46-38 8 8 12 17 20 22" fill="none" stroke="url(#blue)" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="358" cy="296" r="4" fill="#38bdf8"/><circle cx="402" cy="258" r="4" fill="#2563eb"/>
+  </g>
+
+  <g>
+    <rect x="510" y="140" width="196" height="238" rx="20" fill="#ffffff" stroke="#ccdeef" stroke-width="2"/>
+    <text x="534" y="172" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="1" fill="#275b8f">INQUIRIES</text>
+    <rect x="534" y="194" width="148" height="54" rx="12" fill="#edf6ff"/><circle cx="554" cy="221" r="8" fill="#38bdf8"/><rect x="570" y="210" width="80" height="7" rx="3.5" fill="#6b8bad"/><rect x="570" y="224" width="54" height="6" rx="3" fill="#b1c6d9"/>
+    <rect x="534" y="260" width="148" height="54" rx="12" fill="#edf6ff"/><circle cx="554" cy="287" r="8" fill="#60a5fa"/><rect x="570" y="276" width="74" height="7" rx="3.5" fill="#6b8bad"/><rect x="570" y="290" width="64" height="6" rx="3" fill="#b1c6d9"/>
+    <rect x="534" y="326" width="104" height="24" rx="12" fill="#0b2341"/><text x="550" y="343" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="750" fill="#ffffff">Organized</text><circle cx="620" cy="338" r="5" fill="#38bdf8"/>
+  </g>
+
+  <g>
+    <rect x="94" y="402" width="190" height="158" rx="20" fill="#ffffff" stroke="#ccdeef" stroke-width="2"/>
+    <text x="118" y="434" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing=".8" fill="#275b8f">CONNECTIVITY</text>
+    <path d="M142 495c25-26 69-26 94 0M158 479c17-16 45-16 62 0M177 463c7-6 17-6 24 0" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="189" cy="510" r="8" fill="#38bdf8"/>
+    <text x="118" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="650" fill="#52677d">Network and voice</text>
+  </g>
+
+  <g>
+    <rect x="304" y="402" width="190" height="158" rx="20" fill="#ffffff" stroke="#ccdeef" stroke-width="2"/>
+    <text x="328" y="434" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing=".8" fill="#275b8f">SUPPORT</text>
+    <path d="M399 456 435 470v24c0 20-14 33-36 40-22-7-36-20-36-40v-24l36-14Z" fill="#eaf4ff" stroke="#60a5fa" stroke-width="4"/>
+    <path d="m383 493 11 11 22-26" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="328" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="650" fill="#52677d">Protected and maintained</text>
+  </g>
+
+  <g>
+    <rect x="514" y="402" width="192" height="158" rx="20" fill="#0b2341"/>
+    <text x="538" y="434" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing=".9" fill="#93c5fd">ONE COORDINATED SETUP</text>
+    <path d="M540 474h140M540 502h140" stroke="#2e5277" stroke-width="2"/>
+    <circle cx="554" cy="474" r="7" fill="#38bdf8"/><circle cx="594" cy="474" r="7" fill="#60a5fa"/><circle cx="634" cy="474" r="7" fill="#2563eb"/><circle cx="674" cy="474" r="7" fill="#93c5fd"/>
+    <path d="M554 474h120" stroke="#5e88b1" stroke-width="3" stroke-linecap="round"/>
+    <text x="538" y="532" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="650" fill="#dbeafe">Clear. Connected. Manageable.</text>
+  </g>
 </svg>
