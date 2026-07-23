@@ -13,7 +13,7 @@
     <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#0b2341">
     <meta name="msapplication-config" content="assets/images/browserconfig.xml">
     <meta name="theme-color" content="#f6faff">
-    <link rel="stylesheet" href="assets/css/main.css?v=20260723-projects-visual">
+    <link rel="stylesheet" href="assets/css/main.css?v=20260723-aurora-hero">
     <script src="assets/js/theme.js?v=20260723-clean-nav" defer></script>
   </head>
   <body>
@@ -35,21 +35,37 @@
 
     <main id="top">
       <section class="hero" data-reveal>
+        <div class="hero-ambient" aria-hidden="true">
+          <span class="hero-orb hero-orb-one"></span>
+          <span class="hero-orb hero-orb-two"></span>
+          <span class="hero-orb hero-orb-three"></span>
+          <span class="hero-sweep"></span>
+          <svg class="hero-network" viewBox="0 0 1440 720" preserveAspectRatio="none">
+            <path class="network-path path-one" d="M-80 560C240 360 420 610 700 390S1120 150 1520 330"/>
+            <path class="network-path path-two" d="M-60 190C280 390 430 90 760 250s430 330 760 140"/>
+            <path class="network-path path-three" d="M160 760C290 430 570 520 720 310S1060 120 1280-60"/>
+            <circle class="network-node node-one" cx="305" cy="446" r="5"/>
+            <circle class="network-node node-two" cx="698" cy="391" r="6"/>
+            <circle class="network-node node-three" cx="1050" cy="233" r="5"/>
+            <circle class="network-node node-four" cx="760" cy="250" r="4"/>
+          </svg>
+        </div>
         <div class="hero-copy">
           <p class="eyebrow">Mount Forest, Wellington County, and remote-friendly support</p>
-          <h1>Websites, business systems, and practical IT support.</h1>
-          <p>Phylia Consulting helps small businesses build a professional online presence, improve how inquiries are handled, and set up the technology they rely on every day.</p>
+          <h1><span>Professional online.</span><span>Connected behind the scenes.</span></h1>
+          <p>Phylia Consulting helps small businesses present themselves professionally, handle customer inquiries clearly, and keep the technology behind daily work dependable.</p>
           <div class="hero-actions">
             <a class="button primary" href="contact.html">Tell us what you need</a>
             <a class="button secondary" href="#work">View selected projects</a>
           </div>
+          <div class="hero-capabilities" aria-label="Core Phylia services">
+            <span><i></i>Custom websites</span>
+            <span><i></i>Smart forms and systems</span>
+            <span><i></i>Connectivity and voice</span>
+            <span><i></i>Ongoing technical support</span>
+          </div>
         </div>
-        <figure class="hero-visual">
-          <img src="assets/images/hero-capabilities.svg?v=20260723-workspace" alt="Connected business workspace showing a professional website, organized inquiries, reliable connectivity, and ongoing support" width="800" height="650">
-          <figcaption><strong>One practical technology partner.</strong> Website, systems, connectivity, and support considered together.</figcaption>
-        </figure>
       </section>
-
       <section class="section company-intro" id="about" data-reveal>
         <div class="company-copy">
           <p class="section-kicker">About Phylia</p>
@@ -227,8 +243,26 @@
     </main>
 
     <footer class="site-footer">
-      <p>Based in Mount Forest, Ontario. Supporting small businesses locally and remotely.</p>
-      <p>&copy; 2026 Phylia Consulting. All rights reserved.</p>
+      <div class="footer-about">
+        <img src="assets/images/phylia-logo-modern-dark.svg?v=modernlogo" alt="Phylia Consulting">
+        <p>Professional websites, connected business systems, and practical technology support for small businesses.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <strong>Explore</strong>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#work">Projects</a>
+        <a href="index.html#starter-options">Pricing</a>
+      </nav>
+      <div class="footer-contact">
+        <strong>Start a conversation</strong>
+        <a href="mailto:phyliaconsulting@gmail.com">phyliaconsulting@gmail.com</a>
+        <span>Mount Forest, Ontario</span>
+        <span>Local and remote-friendly support</span>
+        <a href="https://dashboard.phyliaconsulting.ca" rel="nofollow">Business dashboard</a>
+      </div>
+      <p class="footer-legal">&copy; 2026 Phylia Consulting. All rights reserved.</p>
     </footer>
   </body>
 </html>
