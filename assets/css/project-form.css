@@ -80,6 +80,10 @@ details[open] summary {
   padding: 4px 20px 22px;
 }
 
+.optional-contact-grid {
+  padding-top: 22px;
+}
+
 @media (max-width: 720px) {
   .choice-grid {
     grid-template-columns: 1fr;

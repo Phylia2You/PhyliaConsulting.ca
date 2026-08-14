@@ -61,7 +61,7 @@
         .map(([key, value]) => `${key}: ${value}`)
         .join('\n\n');
 
-      const mailto = `mailto:phyliaconsulting@gmail.com?subject=${encodeURIComponent('Phylia project inquiry')}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:joanna@phyliaconsulting.ca?subject=${encodeURIComponent('Phylia project inquiry')}&body=${encodeURIComponent(body)}`;
       show('The online form is temporarily unavailable. Opening your email app instead.', true);
       window.location.href = mailto;
       return;
