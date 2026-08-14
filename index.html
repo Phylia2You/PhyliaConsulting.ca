@@ -27,8 +27,8 @@
     <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#0b2341">
     <meta name="msapplication-config" content="assets/images/browserconfig.xml">
     <meta name="theme-color" content="#f6faff">
-    <link rel="stylesheet" href="assets/css/main.css?v=20260814-brand-refine-2">
-    <script src="assets/js/theme.js?v=20260723-clean-nav" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css?v=20260814-mobile-nav-bright">
+    <script src="assets/js/theme.js?v=20260814-mobile-nav" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -56,7 +56,10 @@
         <img class="logo-light" src="assets/images/phylia-logo-modern-light.svg?v=modernlogo" alt="Phylia Consulting logo">
         <img class="logo-dark" src="assets/images/phylia-logo-modern-dark.svg?v=modernlogo" alt="Phylia Consulting logo">
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
