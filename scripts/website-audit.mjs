@@ -43,7 +43,7 @@ for (const page of pages) {
   }
 }
 
-for (const cssFile of ['assets/css/main.css', 'assets/css/project-form.css']) {
+for (const cssFile of ['assets/css/main.css', 'assets/css/project-form.css', 'assets/css/portfolio.css']) {
   const source = read(cssFile);
   for (const match of source.matchAll(/url\(\s*["']?([^)'"]+)/g)) {
     const reference = cleanReference(match[1].trim());
@@ -61,7 +61,7 @@ for (const reference of [manifest.start_url, ...(manifest.icons || []).map((icon
   if (!exists(target)) errors.push(`${manifestFile}: missing manifest reference ${reference}`);
 }
 
-for (const script of ['assets/js/theme.js', 'assets/js/contact.js']) {
+for (const script of ['assets/js/theme.js', 'assets/js/contact.js', 'assets/js/portfolio.js']) {
   try {
     new Function(read(script));
   } catch (error) {

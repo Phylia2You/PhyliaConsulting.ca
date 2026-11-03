@@ -1,18 +1,20 @@
 (() => {
   const root = document.documentElement;
-  const saved = localStorage.getItem('phylia-theme');
-  if (saved) root.dataset.theme = saved;
+  let saved;
+  try { saved = localStorage.getItem('phylia-theme'); } catch (_) { /* Storage may be disabled. */ }
+  if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
   const button = document.querySelector('[data-theme-toggle]');
   const sync = () => {
     if (!button) return;
     const dark = root.dataset.theme === 'dark';
     button.textContent = dark ? 'Light mode' : 'Dark mode';
     button.setAttribute('aria-pressed', String(dark));
+    button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
   };
   sync();
   button?.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('phylia-theme', root.dataset.theme);
+    try { localStorage.setItem('phylia-theme', root.dataset.theme); } catch (_) { /* Theme still works without persistence. */ }
     sync();
   });
 
