@@ -12,7 +12,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const exists = (file) => fs.existsSync(path.join(root, file));
 const cleanReference = (value) => decodeURIComponent(value.split(/[?#]/, 1)[0]);
 
-const pages = ['index.html', 'contact.html'];
+const pages = ['index.html', 'contact.html', 'resume.html'];
 const pageIds = new Map();
 
 for (const page of pages) {
