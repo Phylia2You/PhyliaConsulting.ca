@@ -18,3 +18,5 @@ jobs:
           node-version: 24
       - name: Check website references and scripts
         run: node scripts/website-audit.mjs
+      - name: Check dashboard demo workflows and isolation
+        run: node scripts/dashboard-demo-test.mjs

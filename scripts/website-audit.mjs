@@ -7,7 +7,7 @@ const inventory=args[0]==='--inventory'?new Set(JSON.parse(fs.readFileSync(args[
 const exists=p=>fs.existsSync(p)||(/\.(png|jpg|ico)$/i.test(p)&&inventory.has(p));
 const read=p=>fs.readFileSync(p,'utf8');
 const errors=[];
-const pages=['index.html','contact.html','resume.html','logo-tests/index.html'];
+const pages=['index.html','contact.html','resume.html','dashboard-demo.html','logo-tests/index.html'];
 const ids=new Map();
 for(const page of pages){
  const s=read(page),found=[...s.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
@@ -26,7 +26,7 @@ for(const page of pages){
  }
  for(const a of read(page).matchAll(/<a\b[^>]*target="_blank"[^>]*>/g)){if(!/rel="[^"]*noopener/.test(a[0]))errors.push(page+': external link needs noopener');}
 }
-for(const file of ['assets/js/theme.js','assets/js/portfolio.js']){try{new Function(read(file));}catch(e){errors.push(file+': '+e.message);}}
+for(const file of ['assets/js/theme.js','assets/js/portfolio.js','assets/js/dashboard-demo.js']){try{new Function(read(file));}catch(e){errors.push(file+': '+e.message);}}
 const manifest=JSON.parse(read('assets/images/site.webmanifest'));
 for(const ref of [manifest.start_url,...manifest.icons.map(x=>x.src)]){
  const file=path.posix.normalize(path.posix.join('assets/images',ref.split('?')[0]));
