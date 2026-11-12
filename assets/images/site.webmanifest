@@ -1,20 +1,17 @@
 {
-  "name": "Joanna Ross | Technical Portfolio",
+  "name": "Joanna Ross | Personal Portfolio",
   "short_name": "Joanna Ross",
   "icons": [
     {
-      "src": "android-chrome-192x192.png?v=20260723",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "android-chrome-512x512.png?v=20260723",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "favicon.svg?v=20261112",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#f8f9fc",
-  "background_color": "#f8f9fc",
+  "theme_color": "#f7f8fc",
+  "background_color": "#f7f8fc",
   "display": "standalone",
   "start_url": "../../index.html"
 }
+

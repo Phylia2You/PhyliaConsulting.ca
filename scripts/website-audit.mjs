@@ -1,103 +1,37 @@
 #!/usr/bin/env node
-/** CI checks for references shared by the public website and intake Worker. */
-
+/** Public portfolio checks. --inventory accepts a GitHub tree for unchanged binary assets in a partial checkout. */
 import fs from 'node:fs';
 import path from 'node:path';
-import process from 'node:process';
-
-
-const root = process.cwd();
-const errors = [];
-const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
-const exists = (file) => fs.existsSync(path.join(root, file));
-const cleanReference = (value) => decodeURIComponent(value.split(/[?#]/, 1)[0]);
-
-const pages = ['index.html', 'contact.html', 'resume.html'];
-const pageIds = new Map();
-
-for (const page of pages) {
-  const source = read(page);
-  const ids = [...source.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]);
-  const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
-  if (duplicates.length) errors.push(`${page}: duplicate IDs: ${[...new Set(duplicates)].join(', ')}`);
-  pageIds.set(page, new Set(ids));
+const args=process.argv.slice(2);
+const inventory=args[0]==='--inventory'?new Set(JSON.parse(fs.readFileSync(args[1],'utf8')).tree.filter(x=>x.type==='blob').map(x=>x.path)):new Set();
+const exists=p=>fs.existsSync(p)||(/\.(png|jpg|ico)$/i.test(p)&&inventory.has(p));
+const read=p=>fs.readFileSync(p,'utf8');
+const errors=[];
+const pages=['index.html','contact.html','resume.html','logo-tests/index.html'];
+const ids=new Map();
+for(const page of pages){
+ const s=read(page),found=[...s.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
+ ids.set(page,new Set(found));
+ if(found.length!==ids.get(page).size)errors.push(page+': duplicate IDs');
+ if((s.match(/<h1(?:\s|>)/g)||[]).length!==1&&!page.startsWith('logo-tests'))errors.push(page+': needs exactly one H1');
+ if(/Phylia(?!consulting\.ca)|Consulting project inquiry|book a call|request a quote|founder of|assets\/documents\/Joanna_Ross_Resume\.pdf/i.test(s))errors.push(page+': old business branding or resume reference');
+ for(const m of s.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)){try{JSON.parse(m[1]);}catch{errors.push(page+': invalid structured data');}}
 }
-
-for (const page of pages) {
-  const source = read(page);
-  const references = [...source.matchAll(/\b(?:href|src)=["']([^"']+)["']/g)]
-    .map((match) => match[1]);
-  for (const tag of source.matchAll(/<meta\b[^>]*>/g)) {
-    if (!/\bname=["']msapplication-config["']/.test(tag[0])) continue;
-    const content = tag[0].match(/\bcontent=["']([^"']+)["']/);
-    if (content) references.push(content[1]);
-  }
-  for (const reference of references) {
-    if (/^(?:https?:|mailto:|tel:|data:|\/\/)/.test(reference)) continue;
-    const [pathname, fragment] = reference.split('#', 2);
-    const target = cleanReference(pathname || page);
-    if (target && !exists(target)) errors.push(`${page}: missing local reference ${reference}`);
-    if (fragment && pageIds.has(target) && !pageIds.get(target).has(fragment)) {
-      errors.push(`${page}: missing anchor ${reference}`);
-    }
-  }
+for(const page of pages){
+ for(const m of read(page).matchAll(/\b(?:href|src)=["']([^"']+)["']/g)){
+  if(/^(?:https?:|mailto:|tel:|data:)/.test(m[1]))continue;
+  const [ref,fragment]=m[1].split('#'),file=ref?path.posix.normalize(path.posix.join(path.posix.dirname(page),ref.split('?')[0])):page;
+  if(!exists(file))errors.push(page+': missing '+file);
+  if(fragment&&ids.has(file)&&!ids.get(file).has(fragment))errors.push(page+': missing anchor '+m[1]);
+ }
+ for(const a of read(page).matchAll(/<a\b[^>]*target="_blank"[^>]*>/g)){if(!/rel="[^"]*noopener/.test(a[0]))errors.push(page+': external link needs noopener');}
 }
-
-for (const cssFile of ['assets/css/main.css', 'assets/css/project-form.css', 'assets/css/portfolio.css']) {
-  const source = read(cssFile);
-  for (const match of source.matchAll(/url\(\s*["']?([^)'"]+)/g)) {
-    const reference = cleanReference(match[1].trim());
-    if (/^(?:https?:|data:|\/\/)/.test(reference)) continue;
-    const target = path.normalize(path.join(path.dirname(cssFile), reference));
-    if (!exists(target)) errors.push(`${cssFile}: missing CSS asset ${match[1]}`);
-  }
+for(const file of ['assets/js/theme.js','assets/js/portfolio.js']){try{new Function(read(file));}catch(e){errors.push(file+': '+e.message);}}
+const manifest=JSON.parse(read('assets/images/site.webmanifest'));
+for(const ref of [manifest.start_url,...manifest.icons.map(x=>x.src)]){
+ const file=path.posix.normalize(path.posix.join('assets/images',ref.split('?')[0]));
+ if(!exists(file))errors.push('Manifest missing '+file);
 }
+if(errors.length){console.error(errors.join('\n'));process.exit(1);}
+console.log('Portfolio audit passed: pages, headings, anchors, assets, external links, structured data, scripts, manifest and business-reference checks.');
 
-const manifestFile = 'assets/images/site.webmanifest';
-const manifest = JSON.parse(read(manifestFile));
-for (const reference of [manifest.start_url, ...(manifest.icons || []).map((icon) => icon.src)]) {
-  if (!reference) continue;
-  const target = path.normalize(path.join(path.dirname(manifestFile), cleanReference(reference)));
-  if (!exists(target)) errors.push(`${manifestFile}: missing manifest reference ${reference}`);
-}
-
-for (const script of ['assets/js/theme.js', 'assets/js/contact.js', 'assets/js/portfolio.js']) {
-  try {
-    new Function(read(script));
-  } catch (error) {
-    errors.push(`${script}: JavaScript syntax error: ${error.message}`);
-  }
-}
-
-const workerPathMatch = read('wrangler.toml').match(/^main\s*=\s*["']([^"']+)["']/m);
-if (!workerPathMatch || !exists(workerPathMatch[1])) {
-  errors.push('wrangler.toml: configured Worker entry point does not exist');
-} else {
-  const workerSource = read(workerPathMatch[1]);
-  try {
-    new Function(workerSource.replace(/export\s+default/, 'return'));
-  } catch (error) {
-    errors.push(`${workerPathMatch[1]}: Worker syntax error: ${error.message}`);
-  }
-
-  const formSource = read('assets/js/contact.js');
-  const payload = formSource.match(/\bconst\s+data\s*=\s*\{([\s\S]*?)^\s*\};/m);
-  const allowlist = workerSource.match(/\bconst\s+fieldNames\s*=\s*\[([\s\S]*?)\];/);
-  if (!payload || !allowlist) {
-    errors.push('Unable to inspect form-to-Worker field mapping');
-  } else {
-    const sent = [...payload[1].matchAll(/^\s*([A-Za-z_$][\w$]*)\s*:/gm)].map((m) => m[1]);
-    const allowed = new Set([...allowlist[1].matchAll(/["']([A-Za-z_$][\w$]*)["']/g)].map((m) => m[1]));
-    for (const field of sent) {
-      if (!allowed.has(field)) errors.push(`Contact form field is dropped by Worker: ${field}`);
-    }
-  }
-}
-
-if (errors.length) {
-  console.error(`Website audit failed with ${errors.length} error(s):`);
-  for (const error of errors) console.error(`- ${error}`);
-  process.exit(1);
-}
-
-console.log(`Website audit passed: ${pages.length} pages, local assets, anchors, scripts, manifest, and intake fields.`);

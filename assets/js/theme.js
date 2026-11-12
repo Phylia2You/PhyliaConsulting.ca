@@ -1,7 +1,7 @@
 (() => {
   const root = document.documentElement;
   let saved;
-  try { saved = localStorage.getItem('phylia-theme'); } catch (_) { /* Storage may be disabled. */ }
+  try { saved = localStorage.getItem('joanna-theme'); } catch (_) { /* Storage may be disabled. */ }
   if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
   const button = document.querySelector('[data-theme-toggle]');
   const sync = () => {
@@ -14,7 +14,7 @@
   sync();
   button?.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    try { localStorage.setItem('phylia-theme', root.dataset.theme); } catch (_) { /* Theme still works without persistence. */ }
+    try { localStorage.setItem('joanna-theme', root.dataset.theme); } catch (_) { /* Theme still works without persistence. */ }
     sync();
   });
 
@@ -59,3 +59,4 @@
 
   revealItems.forEach((item) => revealObserver.observe(item));
 })();
+
